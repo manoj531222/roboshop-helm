@@ -1,5 +1,7 @@
 pipeline {
     agent any
+     parameters {
+            string(name: 'component', defaultValue: '', description: 'App Component Name')
 
     stages {
         stage('Clone App Repo') {
