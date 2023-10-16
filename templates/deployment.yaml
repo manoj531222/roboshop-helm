@@ -36,8 +36,8 @@ spec:
           image: 693381842268.dkr.ecr.us-east-1.amazonaws.com/aws-parameter-store:latest
           imagePullPolicy: Always
           env:
-            -name: PARAMS
-             value: {{ .Values.params }}
+            - name: PARAMS
+              value: {{ .Values.params }}
           volumeMounts:
             - mountPath: /params
               name: params-volume
