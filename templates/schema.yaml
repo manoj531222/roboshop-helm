@@ -22,7 +22,7 @@
 #{{- end }}
 #
 #
-  {{- if .Values.schema.enabled }}
+{{- if .Values.schema.enabled }}
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -43,4 +43,4 @@ spec:
               value: {{ .Values.schema.type }}
       restartPolicy: Never
   backoffLimit: 4
-  {{- end }}
+{{- end }}
